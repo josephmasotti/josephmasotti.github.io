@@ -10,6 +10,27 @@
     padding-left: 10px;
     font-style: italic;
     color: #555;
+            .dropdown-toggle {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    padding-right: 20px;
+                .dropdown-toggle .arrow {
+    margin-right: 5px;
+    transition: transform 0.2s ease;
+}
+}
+
+.dropdown-toggle:hover {
+    color: #007bff;
+    text-decoration: underline;
+}
+
+.dropdown-toggle .arrow {
+    margin-right: 5px;
+    transition: transform 0.2s ease;
+}
+
 }
         * {
             margin: 0;
@@ -153,6 +174,7 @@
             <li><a href="#interests">Research Interests</a></li>
             <li><a href="#publications">Publications</a></li>
             <li><a href="#inprogress">Research in Progress</a></li>
+            <li><a href="recentpresentations">Recent Presentations</a></li>
             <li><a href="#cv">CV</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
@@ -178,7 +200,7 @@
     <h2>Publications</h2>
 
     <div class="publication">
-        <strong class="dropdown-toggle">Emotional Cues and Misplaced Trust in Artificial Agents</strong>
+        <strong class="dropdown-toggle"><span class="arrow">▸</span>Emotional Cues and Misplaced Trust in Artificial Agents</strong>
         <p>(2025)</p>
         <p>Oxford Intersections: AI in Society</p>
         <div class="abstract" style="display: none;">
@@ -187,7 +209,7 @@
     </div>
 
     <div class="publication">
-        <strong class="dropdown-toggle">When Do People Have an Obligation Not to Tic? Blame, Free Will, and Moral Character Judgments of People with Tourette's Syndrome</strong>
+        <strong class="dropdown-toggle"><span class="arrow">▸</span>When Do People Have an Obligation Not to Tic? Blame, Free Will, and Moral Character Judgments of People with Tourette's Syndrome</strong>
         <p>Joseph Masotti, Paul Conway (2024)</p>
         <p>Neuroethics</p>
         <div class="abstract" style="display: none;">
@@ -205,7 +227,7 @@
                 <em>Drafts are available upon request</em>
             </ul>
         </section>
-              <section id="recent-presentations">
+              <section id="recentpresentations">
   <h2>Recent Presentations</h2>
 
   <div class="publication">
@@ -258,7 +280,10 @@
         toggle.style.cursor = 'pointer';
         toggle.addEventListener('click', () => {
             const abstract = toggle.parentElement.querySelector('.abstract');
-            abstract.style.display = abstract.style.display === 'none' ? 'block' : 'none';
+            const arrow = toggle.querySelector('.arrow');
+            const isOpen = abstract.style.display === 'block';
+            abstract.style.display = isOpen ? 'none' : 'block';
+            arrow.textContent = isOpen ? '▸' : '▾';
         });
     });
 </script>
