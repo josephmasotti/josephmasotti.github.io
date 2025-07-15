@@ -122,13 +122,21 @@
     display: block;
     object-fit: cover;
         }
-        header {
-    text-align: center;
+       header {
+    background-image: url('IMG_6679.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 300px;
     position: relative;
-    margin-bottom: 30px;
     border-radius: 8px;
-    overflow: hidden;
-    padding-top: 200px;
+    margin-bottom: 60px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding-bottom: 100px;
+    text-align: center;
 }
 
 .cover-image {
@@ -146,19 +154,19 @@
   position: relative;
   padding-bottom: 90px; /* Space for image to overlap without hitting text */
 }
-
+header h1,
+header p {
+    margin: 0;
+    color: #333;
+}
 .profile-image {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 4px solid white;
-  position: absolute;
-  bottom: -75px; /* Half the height to center it on the bottom edge */
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: white;
-  z-index: 1;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid white;
+    background-color: white;
+    margin-bottom: 15px;
 }
         .publication + .publication {
     margin-top: 20px;
@@ -216,13 +224,10 @@
 </head>
 <body>
   <header>
-  <div class="header-inner">
-    <div class="cover-image"></div>
     <img src="profile-pic.jpg" alt="Profile Picture" class="profile-image">
     <h1>Joseph Masotti</h1>
     <p>Graduate Student</p>
     <p>University of California San Diego, Department of Philosophy</p>
-  </div>
 </header>
 
     <nav>
