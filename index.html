@@ -122,6 +122,34 @@
     display: block;
     object-fit: cover;
         }
+        header {
+    text-align: center;
+    position: relative;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.cover-image {
+    width: 100%;
+    height: 200px; /* adjust as needed */
+    background-image: url(IMG_6679); /* replace with your image filename */
+    background-size: cover;
+    background-position: center;
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid white;
+    position: absolute;
+    top: 120px; /* adjusts how far the profile pic drops into the header */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+}
         .publication + .publication {
     margin-top: 20px;
 }
@@ -177,12 +205,13 @@
     </style>
 </head>
 <body>
-    <header>
-        <img src="profile-pic.jpg" alt="Profile Picture" class="profile-image">
-        <h1>Joseph Masotti</h1>
-        <p>Graduate Student</p>
-        <p>University of California San Diego, Department of Philosophy</p>
-    </header>
+   <header>
+  <div class="cover-image"></div>
+  <img src="profile-pic.jpg" alt="Profile Picture" class="profile-image">
+  <h1>Joseph Masotti</h1>
+  <p>Graduate Student</p>
+  <p>University of California San Diego, Department of Philosophy</p>
+</header>
 
     <nav>
         <ul>
