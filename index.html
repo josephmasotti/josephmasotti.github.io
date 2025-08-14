@@ -5,6 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Joseph Masotti</title>
   <style>
+    @media (max-width: 768px) {
+  .profile-image {
+    bottom: -50px; /* lowers the image so it doesn’t cover text */
+    width: 120px;   /* optionally make it smaller for mobile */
+    height: 120px;
+  }
+
+  .header-text {
+    bottom: -30px; /* move the text down slightly too */
+  }
+
+  .header-text h1,
+  .header-text p {
+    font-size: 1rem; /* optional: reduce font size slightly */
+  }
+}
+
     * {
       margin: 0;
       padding: 0;
